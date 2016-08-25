@@ -1,5 +1,6 @@
 import { Component } from 'angular2/core';
 import { Skeleton } from './skeleton.model'
+import { SkeletonListComponent } from './skeleton-list.component'
 
 @Component({
   selector: 'my-app',
