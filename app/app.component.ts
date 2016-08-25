@@ -1,10 +1,10 @@
 import { Component } from 'angular2/core';
-import { Skeleton } from './skeleton.model'
-import { SkeletonListComponent } from './skeleton-list.component'
+import { Skeleton } from './skeleton.model';
+import { SkeletonListComponent } from './skeleton-list.component';
 
 @Component({
   selector: 'my-app',
-  directives:[],
+  directives:[SkeletonListComponent],
   template: `
   <div class="container">
     <h1>Skeleton selection</h1>
