@@ -26,10 +26,10 @@ public skeleton: Skeleton[];
     ];
   }
 createSkeleton(SkeletonDetail:string[]):void{
-  var tempWeight: number = parseInt(SkeletonDetail[2]);
+  var tempweight : number = parseInt(SkeletonDetail[2]);
 
   this.skeleton.push(
-    new Skeleton(SkeletonDetail[0], SkeletonDetail[1], tempWeight, this.skeleton.length)
+    new Skeleton(SkeletonDetail[0], SkeletonDetail[1], tempweight)
   );
  }
 }
