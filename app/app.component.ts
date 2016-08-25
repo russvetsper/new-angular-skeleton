@@ -1,15 +1,17 @@
 import { Component } from 'angular2/core';
 import { Skeleton } from './skeleton.model';
 import { SkeletonListComponent } from './skeleton-list.component';
+import { addSkeletonComponent } from './new-skeleton.component'
 
 @Component({
   selector: 'my-app',
-  directives:[SkeletonListComponent],
+  directives:[SkeletonListComponent, addSkeletonComponent],
   template: `
   <div class="container">
     <h1>Skeleton selection</h1>
     <h2>Add New skeleton</h2>
     <skeleton-list [skeletonList]="skeleton"></skeleton-list>
+    <add-skeleton (onSubmitNewSkeleton)="createSkeleton($event)"><add-skeleton>
   </div>
   `
 })
@@ -24,8 +26,10 @@ public skeleton: Skeleton[];
     ];
   }
 createSkeleton(SkeletonDetail:string[]):void{
-  var Skeleton: number = parseInt(SkeletonDetail[2]);
+  var tempWeight: number = parseInt(SkeletonDetail[2]);
 
-
+  this.skeleton.push(
+    new Skeleton(SkeletonDetail[0], SkeletonDetail[1], tempWeight, this.skeleton.length)
+  );
  }
 }
