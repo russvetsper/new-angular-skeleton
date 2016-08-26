@@ -6,11 +6,11 @@ import { Skeleton } from './skeleton.model';
   inputs: ['skeletonList'],
   template: `
   <div *ngFor="#currentSkeleton of skeletonList" (click)="SkeletonClicked(currentSkeleton)">
-    <h3>{{currentSkeleton.name}} | {{currentSkeleton. description}} | {{currentSkeleton.weight}}</h3>
+    <h3>{{currentSkeleton.name}} | {{currentSkeleton.description}} | {{currentSkeleton.weight}}</h3>
     <form *ngIf="currentSkeleton === selectedSkeleton">
       <input [(ngModel)]="currentSkeleton.name">
       <input [(ngModel)]="currentSkeleton.description">
-      <input [(ngModel)]="currentSkeleton.weight" type="number"  aria-label="amount">
+      <input [(ngModel)]="currentSkeleton.weight">
     </form>
   </div>
   `

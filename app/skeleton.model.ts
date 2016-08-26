@@ -1,5 +1,5 @@
 export class Skeleton {
-  constructor (public name: string , public description: string, public weiht: number){
+  constructor (public name: string , public description: string, public weight: number){
 
   }
 }

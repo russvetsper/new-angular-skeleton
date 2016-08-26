@@ -11,7 +11,7 @@ import { addSkeletonComponent } from './new-skeleton.component'
     <h1>Skeleton selection</h1>
     <h2>Add New skeleton</h2>
     <skeleton-list [skeletonList]="skeleton"></skeleton-list>
-    <add-skeleton (onSubmitNewSkeleton)="createSkeleton($event)"><add-skeleton>
+    <add-skeleton (onSubmitNewSkeleton)="createSkeleton($event)"></add-skeleton>
   </div>
   `
 })
